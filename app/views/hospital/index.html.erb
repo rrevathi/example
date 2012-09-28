@@ -1,0 +1,11 @@
+<h1>index</h1>
+<h2>Name</h2>
+<p>
+<% @hospital.each do |hospital| %>
+<%= hospital.name %>
+<%= link_to 'Show', { :action => 'show', :id => hospital.id } %>
+<td><%= link_to 'Edit', { :action => 'edit', :id => hospital.id }  %></td>
+<%= link_to 'Delete', hospital, { :confirm => 'Are you sure?', :method => :delete } %> <br />
+<p>
+<% end %>
+<%= link_to "new ", {:action => 'new' }%>

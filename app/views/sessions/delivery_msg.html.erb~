@@ -1,0 +1,9 @@
+<html>
+<h3><img border="0" src="/images/mail.png"  width="300" height="220" />
+</h3>
+<h3>Mail send successfully</h3>
+<%= link_to 'Home',root_path %> &nbsp; &nbsp; &nbsp;
+<%= link_to 'About', sessions_aboutus_path %> &nbsp; &nbsp; &nbsp;
+<%= link_to 'contact', sessions_contactby_path%>&nbsp; &nbsp; &nbsp;
+<%= link_to 'Email',user1s_path%>
+</html>

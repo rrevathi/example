@@ -1,0 +1,8 @@
+class Hospital < ActiveRecord::Base
+	has_many :doctors
+#protected
+#after_create do |hospital|
+#p "created succesfully"
+#end
+validates :name, :presence = true
+end

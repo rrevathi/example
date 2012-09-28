@@ -1,0 +1,85 @@
+body { background-color: #000000; color: #FFFFFF; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   15px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: orange; }
+a:visited { color: orange; }
+a:hover { color: white; background-color:#000; }
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 0px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {</p>
+  width: 0px;
+  border: 0px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 0px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: black;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+  color: black;
+}
+ #content h3 {
+    margin: 15px 0 7px;
+    font-size:1em;
+    color: black;
+
+  }
+r.pos_fixed
+{
+position:fixed;
+top:10px;
+right:100px;
+}
+ p.pos_fixed
+{
+position:fixed;
+bottom:10px;
+left:250px;
+}
+
+
+p1.pos_fixed
+{
+position:fixed;
+top:20px;
+left:100px;
+}
+
+  

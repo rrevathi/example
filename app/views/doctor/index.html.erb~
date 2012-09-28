@@ -1,0 +1,14 @@
+<h1>index</h1>
+<h4>Name
+hospital_id</h4>
+<p>
+<% @doctor.each do |doctor| %>
+
+<%= doctor.name %>
+<%= doctor.hospital_id %>
+<%= link_to 'Show', { :action => 'show', :id => doctor.id } %>
+<td><%= link_to 'Edit', { :action => 'edit', :id => doctor.id }  %></td>
+<%= link_to 'Delete', doctor , { :confirm => 'Are you sure?', :method => :delete } %> <br />
+<p>
+<% end %>
+<%= link_to "new ", {:action => 'new' }%>

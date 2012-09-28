@@ -1,0 +1,16 @@
+<h1>Show doctors</h1>
+
+<p>
+<b>Name:</b>
+<%= @doctor.name %>
+</p>
+
+<p>
+<b>Hospital_id:</b>
+<%= @doctor.hospital_id %>
+</p>
+
+
+<p><%= link_to "Add new", {:action => 'new' }%></p>
+
+<%= link_to 'index' , { :action => 'index' } %>

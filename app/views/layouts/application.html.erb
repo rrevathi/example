@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<r class="pos_fixed">
+<%= link_to "Home ",sessions_home_path %>&nbsp&nbsp&nbsp
+<%= link_to "aboutus ",sessions_aboutus_path %>&nbsp&nbsp&nbsp
+<%= link_to 'contact', sessions_contactby_path%> &nbsp; &nbsp; &nbsp;
+<r>
+
+
+<r1 class="pos_fixed">
+<div id="user_nav">
+  <% if user_signed_in? %>
+    Signed in as <%= current_user.email %>. Not you?
+    <%= link_to "Sign out", destroy_user_session_path, :method => "delete" %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or
+    <%= link_to "Sign in", new_user_session_path %>
+  <% end %>
+</div>
+<r1 >
+ <title>Example</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+
+
+
+<div id="user_nav">
+  <% if current_user1 %>
+    Welcome, <%= current_user1.name %>!
+
+    <%= link_to "Sign Out", signout_path %>
+  <% else %>
+<p1 class="pos_fixed">
+    <%= link_to "Sign in with facebook", "/auth/facebook" %>&nbsp; &nbsp; &nbsp;
+    <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+<p1>
+  <% end %>
+</div>
+</html>

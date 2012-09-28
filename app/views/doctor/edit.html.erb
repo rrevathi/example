@@ -1,0 +1,16 @@
+<h1>Editing</h1>
+  <%= form_for @doctor, :url=>{:action=>"update", :controller=>"doctor", :id =>  @doctor } do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :hospital_id %><br />
+    <%= f.text_field :hospital_id %>
+  </div>
+  
+<div class="actions">
+<%= f.submit 'Update' %>
+</div>
+<% end %>

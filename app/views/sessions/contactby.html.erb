@@ -1,0 +1,32 @@
+<div style= "margin:0 auto; background-color:#383838 ;width:1200px;height:500px;border:2px solid white">
+
+
+ <%= form_tag(:controller => "sessions", :action => "delivery_msg") do %>
+	<table cellspacing=20>
+		<% if user_signed_in? %>
+				<%=hidden_field :mail, :from, :value=>current_user.email%>
+		<% else %>
+			<tr>
+				<th>From</th>
+				<td><%= text_field :mail, :from, "size" => 20%><font color="red">*</font></td>
+			</tr>
+		<% end %>
+		<tr>
+			<th>To</th>
+			<td><%= text_field :mail, :to, "value" =>"revarajait@gmail.com", "size" => 20%></td>
+		</tr>
+		<tr>
+			<th>Subject</th>
+			<td><%= text_field :mail, :subject, "size" => 20%><font color="red">*</font></td>
+		</tr>
+		<tr>
+			<th>Message</th>
+			<td><%=text_area :mail, :message, :rows=>8, :cols=>30 %><font color="red">*</font></td>
+		</tr>
+		<tr>
+			<th></th>
+			<td><%= submit_tag 'Contact Admin' %></td>
+		</tr>	
+	</table>
+<% end %>
+</div>

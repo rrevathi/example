@@ -1,0 +1,32 @@
+<div style= "margin:0 auto; background-color:#383838 ;width:500px;height:550px;border:2px solid white">
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  
+  <div><%= f.label :firstname %><br />
+  <%= f.text_field :firstname %><font color="red">*</font></div>
+
+  <div><%= f.label :lastname %><br />
+  <%= f.text_field :lastname %><font color="red">*</font></div>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %><font color="red">*</font></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %><font color="red">*</font></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %><font color="red">*</font></div>
+  
+  <div>Gender:<font color="red">*</font><%= f.radio_button :gender, 'male' %> 
+  <%= label :male, 'Male' %> 
+  <%= f.radio_button :gender,'female'%> 
+  <%= label :female, 'Female' %></td> </div>
+
+  <%= f.check_box :term %><%= link_to " terms and conditions", sessions_term_path %>
+
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render :partial => "devise/shared/links" %>
